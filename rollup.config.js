@@ -4,7 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 export default {
   input: "./index.js",
   output: {
-    file: "test",
+    file: "build/index-rollup",
     format: "esm",
   },
   plugins: [
