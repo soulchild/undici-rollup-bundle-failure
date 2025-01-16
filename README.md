@@ -5,7 +5,15 @@ npm run build
 npm run build:rolldown
 ```
 
-results in:
+Resulting bundle sizes:
+
+```
+     31 index-no-undici-rolldown
+ 457688 index-rolldown
+1035668 index-rollup
+```
+
+Rollup fails with:
 
 ```bash
 > rollup -c
@@ -13,6 +21,5 @@ results in:
 (!) Unresolved dependencies
 https://rollupjs.org/troubleshooting/#warning-treating-module-as-external-dependency
 node:sqlite (imported by "node:sqlite?commonjs-external")
-(!) Circular dependency
-node_modules/undici/lib/web/websocket/util.js -> node_modules/undici/lib/web/websocket/connection.js -> node_modules/undici/lib/web/websocket/util.js
+created build/index-rollup in 584ms
 ```
